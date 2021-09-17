@@ -1,0 +1,597 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="page-container">
+        <header id="main-header" data-height-onload="66">
+            <div class="container clearfix et_menu_container" style="background: darkorange;">
+                <div class="title_container">
+{#                    <h1>#}
+{#                        ChainReaction <img src="/media/images/bicycle_front.png" style="max-width: 2rem;" alt="">#}
+{#                        <img src="/media/images/bike_front.png" style="max-width: 2rem;" alt="">#}
+{#                    </h1>#}
+                    <img src="/media/images/ChainReaction.png" alt="">
+                </div>
+                <div id="et-top-navigation" data-height="66" data-fixed-height="40">
+                    <nav id="top-menu-nav">
+                        <ul id="top-menu" class="nav">
+                            <li id="menu-item-242933"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242933"><a
+                                    href="{% url 'bikes:index' %}">Home</a>
+                            </li>
+                            <li id="menu-item-242935"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242935"><a
+                                    href="{% url 'bikes:service' %}">Service</a>
+                            </li>
+                            <li id="menu-item-242939"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242939"><a
+                                    href="{% url 'bikes:blog' %}">Blog</a>
+                            </li>
+                            <li id="menu-item-242941"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242941"><a
+                                    href="{% url 'bikes:services' %}">Services</a>
+                            </li>
+                            <li id="menu-item-242945"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242945"><a
+                                    href="{% url 'bikes:contact' %}">Contact</a>
+                            </li>
+                            <li id="menu-item-242947"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-242947"><a
+                                    href="{% url 'bikes:about' %}">About</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="et_mobile_nav_menu">
+                        <div class="mobile_nav closed">
+                            <span class="select_page">Select Page</span>
+                            <span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="et_search_outer">
+                <div class="container et_search_form_container">
+                    <form role="search" method="get" class="et-search-form"
+                          action="https://www.elegantthemes.com/layouts/">
+                        <input type="search" class="et-search-field" placeholder="Search &hellip;" value="" name="s"
+                               title="Search for:"/></form>
+                    <span class="et_close_search_field"></span>
+                </div>
+            </div>
+        </header>
+
+        <div id="et-main-area">
+            <div id="main-content">
+                <article id="post-242942" class="post-242942 page type-page status-publish hentry">
+                    <div class="entry-content">
+                        <div id="et-boc" class="et-boc">
+                            <div class="et-l et-l--post">
+                                <div class="et_builder_inner_content et_pb_gutters3">
+                                    <div class="et_pb_section et_pb_section_0 et_section_regular">
+                                        <div class="et_pb_row et_pb_row_0 et_pb_equal_columns et_pb_gutters3">
+                                            <div class="et_pb_column et_pb_column_1_2 et_pb_column_0  et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner"><h1><span
+                                                            style="color: #ea3900;">Bike</span> &amp <br/><span style="color: #ea3900;">Motorbike</span><br> Repair Shop</h1>
+                                                    </div>
+                                                </div>
+                                                <div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">Here at our ChainReaction shop, we offer quality services, we help fix your bicycle and get
+                                                        you back on the road.
+                                                    </div>
+                                                </div>
+                                                <div class="et_pb_module et_pb_blurb et_pb_blurb_0 et_clickable  et_pb_text_align_left  et_pb_blurb_position_top et_pb_bg_layout_light">
+                                                    <div class="et_pb_blurb_content">
+                                                        <div class="et_pb_main_blurb_image"><span
+                                                                class="et_pb_image_wrap"><img
+                                                                src="http://sayeed.sandbox.etdevs.com/bike-repair/wp-content/uploads/sites/9/2020/11/bike-repair-34.png"
+                                                                alt=""
+                                                                class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone"/></span>
+                                                        </div>
+
+                                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Schedule appointment</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="" method="post">
+                                {% csrf_token %}
+                                <div class="col">
+                                    <label for="name-text" class="col-form-label">Name:</label>
+                                    <input type="text" name="name" class="form-control" id="name-text">
+                                    <!--            <textarea class="form-control" id="message-text"></textarea>-->
+                                </div>
+
+                                <div class="col">
+                                    <label for="number" class="col-form-label">Phone number:</label>
+                                    <input type="number" name="phnnumber" class="form-control" id="number" placeholder="optional">
+                                    <!--            <textarea class="form-control" id="message-text"></textarea>-->
+                                </div>
+
+                                <div class="col">
+                                    <label for="address" class="col-form-label">Address:</label>
+                                    <input type="text"name="address" class="form-control" id="autonumber" placeholder="optional">
+                                    <!--            <textarea class="form-control" id="message-text"></textarea>-->
+                                </div>
+
+                                    {% if user.is_authenticated %}
+                                        <div class="col">
+                                    <label for="recipient-name" class="col-form-label">Email address <i
+                                            class="fas fa-envelope"></i>:</label>
+                                    <!--            <input type="text" class="form-control" id="recipient-name">-->
+                                    {{ user.email }}
+                                </div>
+
+                                        {% else %}
+                                        <div class="col">
+                                    <label for="recipient-name" class="col-form-label">Email address <i
+                                            class="fas fa-envelope"></i>:</label>
+                                    <!--            <input type="text" class="form-control" id="recipient-name">-->
+                                    <input type="email" name="email" class="text-input contact-input"
+                                           id="recipient-name">
+                                </div>
+
+                                    {% endif %}
+
+
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Date/Time:</label>
+                                    <input type="datetime-local" name="schedule" class="form-control" id="message-text">
+                                    <!--            <textarea class="form-control" id="message-text"></textarea>-->
+                                </div>
+                            <button type="submit" class="btn btn-success">Send <i class="fas fa-paper-plane"></i></button>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{#                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"#}
+{#          data-bs-whatever="@getbootstrap">Click to continue</button>#}
+
+                                                        <div class="et_pb_blurb_container">
+                                                            <h4 class="et_pb_module_header"><span>Schedule Repair</span>
+                                                            </h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="et_pb_column et_pb_column_1_2 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_module et_pb_image et_pb_image_0">
+                                                    <span class="et_pb_image_wrap "><img
+                                                            src="http://sayeed.sandbox.etdevs.com/bike-repair/wp-content/uploads/sites/9/2020/11/bike-repair-35-1.png"
+                                                            alt="" title="bike-repair-35"/></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="et_pb_section et_pb_section_1 et_section_regular">
+                                        <div class="et_pb_row et_pb_row_1 et_pb_gutters1">
+                                            <div class="et_pb_column et_pb_column_1_2 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_module et_pb_image et_pb_image_1">
+                                                    <span class="et_pb_image_wrap "><img
+                                                            src="http://sayeed.sandbox.etdevs.com/bike-repair/wp-content/uploads/sites/9/2020/10/bike-repair-03.jpg"
+                                                            alt="" title="bike-repair-03"/></span>
+                                                </div>
+                                            </div>
+                                            <div class="et_pb_column et_pb_column_1_2 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner"><h2>New &amp; Used Bikes</h2></div>
+                                                </div>
+                                                <div class="et_pb_module et_pb_text et_pb_text_3  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">Vestibulum ante ipsum primis in
+                                                        faucibus orci luctus et ultrices posuere cubilia Curae; Donec
+                                                        velit neque, auctor sit amet aliquam vel, ullamcorper sit amet
+                                                        ligula. Vivamus magna justo, lacinia eget consectetur sed,
+                                                        convallis at tellus.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="et_pb_section et_pb_section_2 et_section_regular">
+                                        <div class="et_pb_row et_pb_row_2">
+                                            <div class="et_pb_column et_pb_column_2_5 et_pb_column_4  et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_module et_pb_text et_pb_text_4  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner"><h2>Our Services</h2></div>
+                                                </div>
+                                            </div>
+                                            <div class="et_pb_column et_pb_column_3_5 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_module et_pb_divider et_pb_divider_0 et_pb_divider_position_ et_pb_space">
+                                                    <div class="et_pb_divider_internal"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="et_pb_row et_pb_row_3">
+                                            <div class="et_pb_column et_pb_column_1_3 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_module et_pb_blurb et_pb_blurb_1  et_pb_text_align_left  et_pb_blurb_position_top et_pb_bg_layout_light">
+                                                    <div class="et_pb_blurb_content">
+                                                        <div class="et_pb_main_blurb_image"><span
+                                                                class="et_pb_image_wrap"><img
+                                                                src="http://sayeed.sandbox.etdevs.com/bike-repair/wp-content/uploads/sites/9/2020/10/Artboard-5.png"
+                                                                alt=""
+                                                                class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone"/></span>
+                                                        </div>
+                                                        <div class="et_pb_blurb_container">
+                                                            <h4 class="et_pb_module_header"><span>Mini Tune Up</span>
+                                                            </h4>
+                                                            <div class="et_pb_blurb_description">Curabitur aliquet quam
+                                                                id dui posuere blandit. Praesent sapien massa, convallis
+                                                                a pellentesque nec.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="et_pb_column et_pb_column_1_3 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_module et_pb_blurb et_pb_blurb_2  et_pb_text_align_left  et_pb_blurb_position_top et_pb_bg_layout_light">
+                                                    <div class="et_pb_blurb_content">
+                                                        <div class="et_pb_main_blurb_image"><span
+                                                                class="et_pb_image_wrap"><img
+                                                                src="http://sayeed.sandbox.etdevs.com/bike-repair/wp-content/uploads/sites/9/2020/10/Artboard-3.png"
+                                                                alt=""
+                                                                class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone"/></span>
+                                                        </div>
+                                                        <div class="et_pb_blurb_container">
+                                                            <h4 class="et_pb_module_header"><span>Maintenance</span>
+                                                            </h4>
+                                                            <div class="et_pb_blurb_description">Curabitur aliquet quam
+                                                                id dui posuere blandit. Praesent sapien massa, convallis
+                                                                a pellentesque nec.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="et_pb_column et_pb_column_1_3 et_pb_column_8  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_module et_pb_blurb et_pb_blurb_3  et_pb_text_align_left  et_pb_blurb_position_top et_pb_bg_layout_light">
+                                                    <div class="et_pb_blurb_content">
+                                                        <div class="et_pb_main_blurb_image"><span
+                                                                class="et_pb_image_wrap"><img
+                                                                src="http://sayeed.sandbox.etdevs.com/bike-repair/wp-content/uploads/sites/9/2020/10/Artboard-7.png"
+                                                                alt=""
+                                                                class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone"/></span>
+                                                        </div>
+                                                        <div class="et_pb_blurb_container">
+                                                            <h4 class="et_pb_module_header"><span>Bike Fixing</span>
+                                                            </h4>
+                                                            <div class="et_pb_blurb_description">Curabitur aliquet quam
+                                                                id dui posuere blandit. Praesent sapien massa, convallis
+                                                                a pellentesque nec.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="et_pb_row et_pb_row_4">
+                                            <div class="et_pb_column et_pb_column_1_3 et_pb_column_9  et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_module et_pb_blurb et_pb_blurb_4  et_pb_text_align_left  et_pb_blurb_position_top et_pb_bg_layout_light">
+                                                    <div class="et_pb_blurb_content">
+                                                        <div class="et_pb_main_blurb_image"><span
+                                                                class="et_pb_image_wrap"><img
+                                                                src="http://sayeed.sandbox.etdevs.com/bike-repair/wp-content/uploads/sites/9/2020/10/Artboard-8.png"
+                                                                alt=""
+                                                                class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone"/></span>
+                                                        </div>
+                                                        <div class="et_pb_blurb_container">
+                                                            <h4 class="et_pb_module_header"><span>Repair Tires</span>
+                                                            </h4>
+                                                            <div class="et_pb_blurb_description">Curabitur aliquet quam
+                                                                id dui posuere blandit. Praesent sapien massa, convallis
+                                                                a pellentesque nec.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="et_pb_column et_pb_column_1_3 et_pb_column_10  et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_module et_pb_blurb et_pb_blurb_5  et_pb_text_align_left  et_pb_blurb_position_top et_pb_bg_layout_light">
+                                                    <div class="et_pb_blurb_content">
+                                                        <div class="et_pb_main_blurb_image"><span
+                                                                class="et_pb_image_wrap"><img
+                                                                src="http://sayeed.sandbox.etdevs.com/bike-repair/wp-content/uploads/sites/9/2020/10/Artboard-6.png"
+                                                                alt=""
+                                                                class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone"/></span>
+                                                        </div>
+                                                        <div class="et_pb_blurb_container">
+                                                            <h4 class="et_pb_module_header"><span>Individual Parts Selection</span>
+                                                            </h4>
+                                                            <div class="et_pb_blurb_description">Curabitur aliquet quam
+                                                                id dui posuere blandit. Praesent sapien massa, convallis
+                                                                a pellentesque nec.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="et_pb_column et_pb_column_1_3 et_pb_column_11  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_module et_pb_blurb et_pb_blurb_6  et_pb_text_align_left  et_pb_blurb_position_top et_pb_bg_layout_light">
+                                                    <div class="et_pb_blurb_content">
+                                                        <div class="et_pb_main_blurb_image"><span
+                                                                class="et_pb_image_wrap"><img
+                                                                src="http://sayeed.sandbox.etdevs.com/bike-repair/wp-content/uploads/sites/9/2020/10/Artboard-4.png"
+                                                                alt=""
+                                                                class="et-waypoint et_pb_animation_off et_pb_animation_off_tablet et_pb_animation_off_phone"/></span>
+                                                        </div>
+                                                        <div class="et_pb_blurb_container">
+                                                            <h4 class="et_pb_module_header"><span>Tire Pressure Service</span>
+                                                            </h4>
+                                                            <div class="et_pb_blurb_description">Curabitur aliquet quam
+                                                                id dui posuere blandit. Praesent sapien massa, convallis
+                                                                a pellentesque nec.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="et_pb_section et_pb_section_3 et_pb_equal_columns et_section_specialty">
+                                        <div class="et_pb_row et_pb_gutters1">
+                                            <div class="et_pb_column et_pb_column_1_3 et_pb_column_12    et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_module et_pb_divider_1 et_pb_space et_pb_divider_hidden">
+                                                    <div class="et_pb_divider_internal"></div>
+                                                </div>
+                                            </div>
+                                            <div class="et_pb_column et_pb_column_2_3 et_pb_column_13   et_pb_specialty_column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_row_inner et_pb_row_inner_0">
+                                                    <div class="et_pb_column et_pb_column_1_3 et_pb_column_inner et_pb_column_inner_0">
+                                                        <div class="et_pb_module et_pb_text et_pb_text_5  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                            <div class="et_pb_text_inner"><h2>Curabitur arcu erat
+                                                                accumsan id imperdiet et porttitor.</h2></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="et_pb_column et_pb_column_1_3 et_pb_column_inner et_pb_column_inner_1 et-last-child">
+                                                        <div class="et_pb_module et_pb_text et_pb_text_6  et_pb_text_align_left et_pb_bg_layout_light">
+                                                            <div class="et_pb_text_inner"><h2>Our Services</h2></div>
+                                                        </div>
+                                                        <div class="et_pb_module et_pb_text et_pb_text_7  et_pb_text_align_left et_pb_bg_layout_light">
+                                                            <div class="et_pb_text_inner">Vestibulum ante ipsum primis
+                                                                in faucibus orci luctus et ultrices posuere cubilia
+                                                                Curae; Donec velit neque, auctor sit amet aliquam vel,
+                                                                ullamcorper sit amet ligula. Vivamus magna justo,
+                                                                lacinia eget consectetur sed, convallis at tellus.
+                                                            </div>
+                                                        </div>
+                                                        <div class="et_pb_button_module_wrapper et_pb_button_0_wrapper  et_pb_module ">
+                                                            <a class="et_pb_button et_pb_custom_button_icon et_pb_button_0 et_pb_bg_layout_light"
+                                                               href="#">Learn More</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="et_pb_row_inner et_pb_row_inner_1">
+                                                    <div class="et_pb_column et_pb_column_4_4 et_pb_column_inner et_pb_column_inner_2 et-last-child">
+                                                        <div class="et_pb_module et_pb_image et_pb_image_2">
+                                                            <span class="et_pb_image_wrap "><img
+                                                                    src="http://sayeed.sandbox.etdevs.com/bike-repair/wp-content/uploads/sites/9/2020/10/bike-repair-10.jpg"
+                                                                    alt="" title="bike-repair-10"/></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="et_pb_section et_pb_section_4 et_section_regular">
+                                        <div class="et_pb_row et_pb_row_5">
+                                            <div class="et_pb_column et_pb_column_4_4 et_pb_column_14  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_module et_pb_divider et_pb_divider_2 et_pb_divider_position_ et_pb_space">
+                                                    <div class="et_pb_divider_internal"></div>
+                                                </div>
+                                                <div class="et_pb_module et_pb_slider et_pb_slider_0 et_pb_slider_fullwidth_off">
+                                                    <div class="et_pb_slides">
+                                                        <div class="et_pb_slide et_pb_slide_0 et_pb_bg_layout_dark et_pb_media_alignment_center et-pb-active-slide"
+                                                             data-slide-id="et_pb_slide_0">
+                                                            <div class="et_pb_container clearfix">
+                                                                <div class="et_pb_slider_container_inner">
+                                                                    <div class="et_pb_slide_description">
+                                                                        <div class="et_pb_slide_content"><p>
+                                                                            “Life is like riding a bicycle. To keep your balance you must keep moving.”</p>
+                                                                            <p style="font-family: bebas neue; font-size: 18px;">
+                                                                                &#8211; Albert Einstein</p></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="et_pb_slide et_pb_slide_1 et_pb_bg_layout_dark et_pb_media_alignment_center"
+                                                             data-slide-id="et_pb_slide_1">
+                                                            <div class="et_pb_container clearfix">
+                                                                <div class="et_pb_slider_container_inner">
+                                                                    <div class="et_pb_slide_description">
+                                                                        <div class="et_pb_slide_content"><p>“It never gets easier, you just go faster.”</p>
+                                                                            <p style="font-family: bebas neue; font-size: 18px;">
+                                                                                &#8211; Greg LeMond</p></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="et_pb_slide et_pb_slide_2 et_pb_bg_layout_dark et_pb_media_alignment_center"
+                                                             data-slide-id="et_pb_slide_1">
+                                                            <div class="et_pb_container clearfix">
+                                                                <div class="et_pb_slider_container_inner">
+                                                                    <div class="et_pb_slide_description">
+                                                                        <div class="et_pb_slide_content"><p>“Cyclists see considerably more of
+                                                                            this beautiful world than any other class of citizens. A good bicycle,
+                                                                            well-applied, will cure most ills this flesh is heir to.”</p>
+                                                                            <p style="font-family: bebas neue; font-size: 18px;">
+                                                                                &#8211; Dr K.K. Doty</p></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="et_pb_section et_pb_section_5 et_section_regular">
+                                        <div class="et_pb_row et_pb_row_6">
+                                            <div class="et_pb_column et_pb_column_1_2 et_pb_column_15  et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_module et_pb_text et_pb_text_8  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner"><h2>Rent a Bike for the Day</h2></div>
+                                                </div>
+                                                <div class="et_pb_module et_pb_text et_pb_text_9  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner"><h3>By the Hour or Daily</h3>
+                                                        <p>Bicycles are available on hire at very affordable price, reach out and get soughted ;)</p></div>
+                                                </div>
+                                                <div class="et_pb_module et_pb_image et_pb_image_3">
+                                                    <span class="et_pb_image_wrap "><img
+                                                            src="http://sayeed.sandbox.etdevs.com/bike-repair/wp-content/uploads/sites/9/2020/10/bike-repair-06.jpg"
+                                                            alt="" title="bike-repair-06"/></span>
+                                                </div>
+                                            </div>
+                                            <div class="et_pb_column et_pb_column_1_2 et_pb_column_16  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_module et_pb_image et_pb_image_4">
+                                                    <span class="et_pb_image_wrap "><img loading="lazy" width="800"
+                                                                                         height="800"
+                                                                                         src="https://www.elegantthemes.com/layouts/wp-content/uploads/2020/11/bike-repair-05.jpg"
+                                                                                         alt="" title="bike-repair-05"
+                                                                                         srcset="https://www.elegantthemes.com/layouts/wp-content/uploads/2020/11/bike-repair-05.jpg 800w, https://www.elegantthemes.com/layouts/wp-content/uploads/2020/11/bike-repair-05-480x480.jpg 480w"
+                                                                                         sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 800px, 100vw"
+                                                                                         class="wp-image-242927"/></span>
+                                                </div>
+                                                <div class="et_pb_module et_pb_text et_pb_text_10  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">There is adequate bicycle available for hire, find the contact in footer below or in the nav bar at the top
+                                                    </div>
+                                                </div>
+                                                <div class="et_pb_button_module_wrapper et_pb_button_1_wrapper  et_pb_module ">
+                                                    <a class="et_pb_button et_pb_custom_button_icon et_pb_button_1 et_pb_bg_layout_light"
+                                                       href="#">View Prices</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="et_pb_section et_pb_section_6 et_pb_with_background et_section_regular">
+                                        <div class="et_pb_row et_pb_row_7">
+                                            <div class="et_pb_column et_pb_column_4_4 et_pb_column_17  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_module et_pb_text et_pb_text_11  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner"><h2>In Need of a Bike Repair?</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="et_pb_row et_pb_row_8">
+                                            <div class="et_pb_column et_pb_column_4_4 et_pb_column_18  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_module et_pb_text et_pb_text_12  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner"><p>Select date and time that you wish to have your bicycle serviced...</p></div>
+                                                </div>
+                                                <div class="et_pb_button_module_wrapper et_pb_button_2_wrapper  et_pb_module ">
+                                                    <a class="et_pb_button et_pb_custom_button_icon et_pb_button_2 et_pb_bg_layout_light"
+                                                       href="" data-icon="&#x24;">Make an Appointment</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="et_pb_section et_pb_section_7 et_pb_with_background et_section_regular">
+                                        <div class="et_pb_row et_pb_row_9">
+                                            <div class="et_pb_column et_pb_column_1_2 et_pb_column_19  et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_module et_pb_text et_pb_text_13  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner"><h3>Phone</h3>
+                                                        <p><a href="#">+254 712345678</a></p></div>
+                                                </div>
+                                                <div class="et_pb_module et_pb_text et_pb_text_14  et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner"><h3>Email</h3>
+                                                        <p>
+                                                            <a href="#"><span
+                                                                    class="__cf_email__"
+                                                                    data-cfemail="19717c757576597d706f707b70727c6a377a7674">[email&#160;protected]</span></a>
+                                                        </p></div>
+                                                </div>
+                                                <ul class="et_pb_module et_pb_social_media_follow et_pb_social_media_follow_0 clearfix  et_pb_bg_layout_light">
+                                                    <li class='et_pb_social_media_follow_network_0 et_pb_social_icon et_pb_social_network_link  et-social-facebook et_pb_social_media_follow_network_0'>
+                                                        <a href='#' class='icon et_pb_with_border'
+                                                           title='Follow on Facebook' target="_blank"><span
+                                                                class='et_pb_social_media_follow_network_name'
+                                                                aria-hidden='true'>Follow</span></a></li>
+                                                    <li class='et_pb_social_media_follow_network_1 et_pb_social_icon et_pb_social_network_link  et-social-twitter et_pb_social_media_follow_network_1'>
+                                                        <a href='#' class='icon et_pb_with_border'
+                                                           title='Follow on Twitter' target="_blank"><span
+                                                                class='et_pb_social_media_follow_network_name'
+                                                                aria-hidden='true'>Follow</span></a></li>
+                                                    <li class='et_pb_social_media_follow_network_2 et_pb_social_icon et_pb_social_network_link  et-social-pinterest et_pb_social_media_follow_network_2'>
+                                                        <a href='#' class='icon et_pb_with_border'
+                                                           title='Follow on Pinterest' target="_blank"><span
+                                                                class='et_pb_social_media_follow_network_name'
+                                                                aria-hidden='true'>Follow</span></a></li>
+                                                    <li class='et_pb_social_media_follow_network_3 et_pb_social_icon et_pb_social_network_link  et-social-linkedin et_pb_social_media_follow_network_3'>
+                                                        <a href='#' class='icon et_pb_with_border'
+                                                           title='Follow on LinkedIn' target="_blank"><span
+                                                                class='et_pb_social_media_follow_network_name'
+                                                                aria-hidden='true'>Follow</span></a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="et_pb_column et_pb_column_1_4 et_pb_column_20  et_pb_css_mix_blend_mode_passthrough">
+                                                <div class="et_pb_with_border et_pb_module et_pb_text et_pb_text_15  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner"><h4>Quick Links</h4></div>
+                                                </div>
+                                                <div class="et_pb_module et_pb_text et_pb_text_16  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner"><p><a href="#">Service
+                                                        </a><br/> <a href="#">Blog</a><br/> <a href="#">Services</a><br/> <a href="#">About</a><br/> </p></div>
+                                                </div>
+                                            </div>
+                                            <div class="et_pb_column et_pb_column_1_4 et_pb_column_21  et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                                <div class="et_pb_with_border et_pb_module et_pb_text et_pb_text_17  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner"><h4>Forms</h4></div>
+                                                </div>
+                                                <div class="et_pb_module et_pb_text et_pb_text_18  et_pb_text_align_left et_pb_bg_layout_dark">
+                                                    <div class="et_pb_text_inner"><p><a href="#">Register</a><br/> <a href="#">Inquir</a><br/> <a href="#">Comment</a><br/>  <a
+                                                            href="#">Leave a message</a><br/> <a href="#">Subscribe</a></p></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <footer id="main-footer">
+                <div id="footer-bottom">
+                    <div class="container clearfix">
+                        <ul class="et-social-icons">
+                            <li class="et-social-icon et-social-facebook">
+                                <i class="fab fa-facebook"></i>
+                                <a href="#" class="icon">
+                                    <span>Facebook</span>
+                                </a>
+                            </li>
+                            <li class="et-social-icon et-social-twitter">
+                                <i class="fab fa-twitter"></i>
+                                <a href="#" class="icon">
+                                    <span>Twitter</span>
+                                </a>
+                            </li>
+                            <li class="et-social-icon et-social-rss">
+                                <i class="fab fa-instagram"></i>
+                                <a href="#" class="icon">
+                                    <span>RSS</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <p id="footer-info">&copy;2021 | All rights reserved</p></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    var $temp = $("<input>");
+var $url = $(location).attr('href');
+
+$('.clipboard').on('click', function() {
+  $("body").append($temp);
+  $temp.val($url).select();
+  document.execCommand("copy");
+  $temp.remove();
+  $("h6").text("URL copied!").hide().fadeIn('slow').delay(3000).hide(1);
+})
+    </script>
+
+{% endblock %}
